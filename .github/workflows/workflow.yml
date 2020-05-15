@@ -12,8 +12,8 @@ jobs:
         uses: actions/checkout@master
       - name: Testing
         run: |
-          cd ProjectName
-          xcodebuild clean test -project ProjectName.xcodeproj -scheme ProjectName -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          cd Hotels\ booking
+          xcodebuild clean test -project 'Hotels booking.xcodeproj' -scheme 'Hotels booking' -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
           bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
         env: 
            destination: ${{ matrix.destination }}
