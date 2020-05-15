@@ -1,6 +1,17 @@
-language: swift # or objective-c
-osx_image: xcode7
-script:
-  - xcodebuild -scheme 'Hotels booking' -workspace 'Hotels booking.xcworkspace' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+language: objective-c
+osx_image: xcode10.1
+xcode_workspace: Hotels booking.xcworkspace # path to your xcodeproj folder
+xcode_scheme: Hotels booking
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone X
+before_install:
+    - pod install
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+    - gem install jazzy
+    - make documentation
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  local-dir: docs
+  on:
+    branch: master
