@@ -1,1 +1,7 @@
- - xcodebuild -project 'Hotels booking.xcodeproj' -scheme 'Hotels booking' -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 6' build test | xcpretty -c --test --color
+{
+  "script": "set -o pipefail && xcodebuild test -workspace \"${TRAVIS_XCODE_WORKSPACE}\" -scheme \"${TRAVIS_XCODE_SCHEME}\" -sdk \"${TRAVIS_XCODE_SDK}\" | xcpretty",
+  "language": "objective-c",
+  "osx_image": "xcode8",
+  "xcode_sdk": "iphoneos9.3",
+  "xcode_scheme": "Travis CI"
+}  
