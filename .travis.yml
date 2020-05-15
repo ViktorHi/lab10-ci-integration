@@ -1,7 +1,7 @@
-{
-  "script": "set -o pipefail && xcodebuild test -workspace \"${TRAVIS_XCODE_WORKSPACE}\" -scheme \"${TRAVIS_XCODE_SCHEME}\" -sdk \"${TRAVIS_XCODE_SDK}\" | xcpretty",
-  "language": "objective-c",
-  "osx_image": "xcode8",
-  "xcode_sdk": "iphoneos9.3",
-  "xcode_scheme": "Travis CI"
-}  
+language:
+  - swift
+osx_image: xcode10.1
+script:
+  - xcodebuild -scheme Hotels booking -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
