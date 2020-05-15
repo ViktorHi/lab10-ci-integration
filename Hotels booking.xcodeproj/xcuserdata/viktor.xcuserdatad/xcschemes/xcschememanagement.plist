@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Hotels booking.xcscheme_^#shared#^_</key>
+		<key>Copy of Hotels booking.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Hotels booking.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>77605FD22467416900DACD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77605FE82467417100DACD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77605FF32467417200DACD1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

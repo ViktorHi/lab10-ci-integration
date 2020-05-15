@@ -23,7 +23,7 @@ class RegistrationController: UIViewController {
         super.viewDidLoad()
         self.hideNavigationBar()
         createAccountBt.layer.cornerRadius = 14
-        //	fill_database()
+        fill_database()
         // Do any additional setup after loading the view.
     }
     
@@ -48,7 +48,7 @@ class RegistrationController: UIViewController {
         }
     }
 
-    /*func fill_database(){
+    func fill_database(){
         addHotel(name: "Grand",descriptions: "Luxury hotel near summary beaches of mediterranean",country: "Greece",city: "Thessaloniki",numbOfLuxRooms: 10,numbOfStRooms: 50,luxPrice: 1000,standardPrice: 300);
         addHotel(name: "Catalonia Barcelona Plaza",descriptions: "Wonderful places of Spain",country: "Spain",city: "Barcelona",numbOfLuxRooms: 15,numbOfStRooms: 100,luxPrice: 1120,standardPrice: 450);
         addHotel(name: "Hostal Art Madrid",descriptions: "Cosy hotel for business trips",country: "Spain",city: "Madrid",numbOfLuxRooms: 0, numbOfStRooms: 50,luxPrice: 0,standardPrice: 350);
@@ -122,7 +122,7 @@ class RegistrationController: UIViewController {
         addRoute(transportType: "Bus", cityFrom: "Riga", cityTo: "Izmir", price: 111, time: "2020-05-15 14:17", timeOfArrive: "2020-05-17 09:48", numbOfTickets: 60, company: "Minoblautotrans")
         addRoute(transportType: "Bus", cityFrom: "Minsk", cityTo: "Naples", price: 96, time: "2020-05-12 13:35", timeOfArrive: "2020-05-14 03:47", numbOfTickets: 53, company: "Minoblautotrans")
         addRoute(transportType: "Bus", cityFrom: "Vilnius", cityTo: "Naples", price: 127, time: "2020-05-16 13:17", timeOfArrive: "2020-05-18 08:22", numbOfTickets: 17, company: "Ecolines")
-    }*/
+    }
     
     func addHotel(name:String,descriptions:String,country:String,city:String,numbOfLuxRooms:Int,numbOfStRooms:Int,luxPrice:Int,
                   standardPrice:Int){
